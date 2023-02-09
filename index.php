@@ -15,6 +15,10 @@ $user4 = [
 ];
 $users2 = [$user3, $user4];
 
+function isValid(bool $test): bool {
+    return $test;
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +33,7 @@ $users2 = [$user3, $user4];
                 } else {
                     echo "<h1>Tu ne peux pas accéder!</h1>";
                 }
+                echo array_key_exists("name", $user4);
                 for ($i = 0; $i < 2; $i++) {
                     echo $users[$i][2] . '<br>';
                 }
