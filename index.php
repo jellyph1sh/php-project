@@ -1,9 +1,20 @@
 <?php
 $userAge = 18;
-$canAccess = false;
-if ($userAge >= 18) {
-    $canAccess = true;
-}
+$canAccess = ($userAge >= 18);
+$user1 = ["VOILA VOILA", "mail@gmail.com", 18];
+$user2 = ["VOILA VOILOU", "mail2@gmail.com2", 16];
+$users = [$user1, $user2];
+
+$user3 = [
+    "name" => "Sacha SORGIATI",
+    "email" => "sacha.sorgiati@gmail.com",
+];
+$user4 = [
+    "name" => "test TEST",
+    "email" => "test.test@gmail.com",
+];
+$users2 = [$user3, $user4];
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +28,15 @@ if ($userAge >= 18) {
                     echo "<h1>Tu peux y accéder!</h1>";
                 } else {
                     echo "<h1>Tu ne peux pas accéder!</h1>";
+                }
+                for ($i = 0; $i < 2; $i++) {
+                    echo $users[$i][2] . '<br>';
+                }
+                foreach ($users as $user) {
+                    echo $user[1] . '<br>';
+                }
+                foreach ($users2 as $user) {
+                    echo $user["name"] . '<br>' . $user["email"] . '<br><br>';
                 }
             ?>
             <?php if ($canAccess):?>
