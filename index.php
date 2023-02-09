@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <title>Page HTML de test</title>
-        <body>
+    </head>
+    <body>
+            <h1>Bonjour, <?php echo "Je n'ai pas encore ton pseudo mais j'écris ça en PHP"?></h1>
             <h2>Page de test</h2>
             <p>
                 Cette page contient <strong>uniquement</strong> du code HTML.<br>
@@ -14,5 +17,4 @@
                 <li style="color:green;">Green</li>
             </ul>
         </body>
-    </head>
 </html>
