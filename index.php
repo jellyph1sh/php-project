@@ -1,6 +1,6 @@
 <?php
 $userAge = 18;
-$canAccess = ($userAge >= 18);
+$canAccess = ($userAge >= 20);
 $user1 = ["VOILA VOILA", "mail@gmail.com", 18];
 $user2 = ["VOILA VOILOU", "mail2@gmail.com2", 16];
 $users = [$user1, $user2];
@@ -27,6 +27,11 @@ function isValid(bool $test): bool {
         <title>Page HTML de test</title>
     </head>
     <body>
+            <a href="test.php?nom=Test&amp;prenom=PRENOMDETEST">GO TESTER</a>
+            <form action="test.php" method="post">
+                <input type="email" name="email">
+                <button type="submit">Envoyer</button>
+            </form>
             <?php
                 if ($canAccess) {
                     echo "<h1>Tu peux y accéder!</h1>";
@@ -53,6 +58,7 @@ function isValid(bool $test): bool {
                 Cette page contient <strong>uniquement</strong> du code HTML.<br>
                 Voici quelques tests:
             </p>
+            <?php include("test.php"); ?>
             <ul>
                 <li style="color:blue;">Blue</li>
                 <li style="color:red;">Red</li>
