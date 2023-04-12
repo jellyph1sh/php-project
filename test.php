@@ -4,5 +4,5 @@
         echo("DEGAGE!");
         return;
     }
-    echo $_POST["email"];
+    echo htmlspecialchars($_POST["email"]);
 ?>
